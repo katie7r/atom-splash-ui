@@ -1,0 +1,126 @@
+
+// Pane blur // APEX-UI-SLIM
+atom-pane:not(.active) {
+  .tab-bar .tab.active {
+    // border-top: 1px solid transparent;
+    border-color: fade(@accent-color, 50%);
+    color: @text-color-subtle;
+  }
+}
+
+// Tabs
+// -------------------
+// Displays selectable tabs above the editor.
+// Overrides: atom/tabs
+
+.tab-bar {
+  background-color: @tab-bar-background-color;
+  // border-bottom: 1px solid @base-border-color;
+  border-bottom: 1px solid @base-border-color;
+  border-radius: 0;
+  // APEX-UI-SLIM:
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  // :end
+  padding-top: 1px;
+
+  .tab {
+    // color: @text-color; // APEX-UI-SLIM
+    color: @text-color-subtle; // APEX-UI-SLIM
+    height: @tab-height;
+    line-height: @tab-height;
+    font-size: @font-size;
+    // APEX-UI-SLIM:
+    // border-right: 1px solid @tab-border-color;
+    // background-color: @tab-background-color;
+    padding-right: 15px; // 10px;
+    // border-top: 1px solid transparent;
+    border-top: 2px solid transparent;
+    text-transform: uppercase;
+    font-size: 11px;
+    transition: all 150ms ease-out;
+    &:last-child {
+      border-right: none;
+    }
+    .title {
+      .icon {
+        &::before {
+          font-size: 13px;
+        }
+      }
+    }
+    &.active {
+      // color: @text-color-selected;
+      // background-color: @tab-background-color-active;
+      flex: 1;
+      color: @text-color-selected;
+      // border-top: 1px solid @tab-border-color-active;
+      border-color: @accent-color;
+      font-weight: bold;
+      .title {
+        padding: 0;
+      }
+      // :end
+    }
+
+
+    // Close Icon --------------------------------
+
+    // Modified (circle)
+
+    &.modified {
+      &:not(:hover) .close-icon {
+        top: 50%;
+        // right: @component-padding + 4px; // 4px -> half of icon size
+        right: 9px;
+        margin-top: -3px;
+        border-color: @text-color-info;
+      }
+
+      &:hover .close-icon {
+        right: 5px;
+        color: currentColor;
+      }
+    }
+
+    // Unmodified/Default (x)
+
+    .close-icon {
+      right: 5px;
+
+      &:hover {
+        color: @text-color-selected;
+      }
+    }
+
+    &.active .close-icon:hover {
+      color: @text-color;
+    }
+
+
+    // Dragging -------------------
+    // Styles get applied while dragging a tab
+    &.is-dragging {
+      background: darken(@tab-background-color, 10%);
+      border-color: transparent;
+      opacity: .5;
+
+      & .close-icon {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+
+atom-dock li.tab[data-type="TreeView"] {
+  // margin: 0 auto;
+  // text-align: center;
+  // width: 100%;
+  border-top: none;
+  padding-top: 10px;
+  padding-left: 7px;
+  pointer-events: none;
+}

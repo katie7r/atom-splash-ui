@@ -1,0 +1,148 @@
+// Lists
+// -------------------
+// Used in different places, like the Tree View, Commmand Palette etc.
+// Overrides: atom/static/lists.less
+
+
+// List Group -------------------
+
+.list-group {
+  li {
+    padding-left: @component-padding/2;
+    // APEX-UI-SLIM:
+    border-bottom: 1px dotted @base-border-color;
+    color: @text-color-dim;
+    transition: all 125ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    // :end
+
+    // We want to highlight the background of the list items because we dont know their size.
+    &.selected {
+      color: @text-color-selected;
+      // APEX-UI-SLIM:
+      // background-color: @background-color-selected;
+      z-index: 15;
+      // :end
+
+      &:before{ display: none; }
+    }
+  }
+}
+
+
+// List Tree -------------------
+
+.list-tree {
+  .selected {
+    color: @text-color-selected;
+  }
+}
+
+
+// Select List -------------------
+
+.select-list {
+  li {
+    padding: @component-padding * .75 @component-padding; // @component-padding/2 @component-padding; // APEX-UI-SLIM
+  }
+
+  .status {
+    float: right;
+  }
+}
+
+// APEX-UI-SLIM:::
+
+.select-list {
+  .character-match {
+    font-weight: normal !important;
+    border-bottom: 1px solid @oc-blue-3;
+    color: inherit;
+  }
+}
+
+// Popover List -------------------
+// Used as a popover for something like autocomplete.
+
+autocomplete-suggestion-list.select-list.popover-list {
+  @popover-list-padding: @component-padding/2;
+
+  padding: @popover-list-padding;
+  border-radius: @component-border-radius;
+  background-color: @overlay-background-color;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.1), 0 0 1px 0 rgba(0,0,0,.14);
+
+  .suggestion-description {
+    background: transparent;
+    font-size: .9rem;
+  }
+
+  .suggestion-description-content {
+    font-size: .9rem;
+  }
+
+  ol.list-group {
+    li {
+      line-height: 2em;
+    }
+  }
+
+  .selected {
+    background: @oc-gray-0;
+
+    .icon {
+      color: @oc-gray-9;
+    }
+  }
+}
+
+.select-list .selected .secondary-line {
+  color: @text-color-subtle;
+}
+
+.list-group li:not(.list-nested-item) {
+  line-height: 1.8;
+}
+
+autocomplete-suggestion-list {
+  .suggestion-list-scroller {
+    background: white;
+  }
+
+  .left-label {
+    color: @oc-gray-6;
+  }
+
+  .word-container {
+    color: @oc-gray-5;
+  }
+
+  .icon-container {
+    // display: none !important;
+
+    .icon {
+      background: rgba(255, 255, 255, .5) !important;
+      color: @oc-gray-4;
+    }
+  }
+}
+
+// // Popover List -------------------
+// // Used as a popover for something like autocomplete.
+//
+// .select-list.popover-list {
+//   @popover-list-padding: @component-padding/2;
+//
+//   padding: @popover-list-padding;
+//   border-radius: @component-border-radius;
+//   background-color: @overlay-background-color;
+//   box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+//
+//   .list-group {
+//     margin-top: @popover-list-padding;
+//     li {
+//       padding-left: @popover-list-padding;
+//     }
+//   }
+// }
+
+// :::end

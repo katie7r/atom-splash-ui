@@ -1,0 +1,84 @@
+// Main Editor
+// -------------------
+//
+
+
+// BEGIN APEX-UI-SLIM ADDITIONS  -----------------
+
+atom-text-editor, :host {
+  background: @base-background-color;
+}
+
+body {
+  transition: all 125ms cubic-bezier(0.215, 0.610, 0.355, 1.000); // .transition;
+}
+
+// Editor blur
+.is-blurred {
+  -webkit-filter: grayscale();
+}
+
+// Remove negative margin-top from no-title-bar
+.platform-darwin atom-workspace atom-workspace-axis.horizontal {
+  margin-top: -24px;
+}
+
+// Pane padding
+atom-pane {
+  padding: 0 0;
+}
+
+
+// Mini Editor
+// -------------------
+// Mini Editors are the "text inputs" used in find+replace or in the settings.
+
+
+atom-text-editor[mini] {
+  // padding-left: @component-padding/2; // APEX-UI-SLIM
+  padding-left: 5px; // APEX-UI-SLIM
+  font-size: .9rem; // APEX-UI-SLIM
+  color: @text-color;
+  // border-radius: @component-border-radius; // APEX-UI-SLIM
+  background-color: @input-background-color;
+  border-bottom: 1px solid transparent; // APEX-UI-SLIM
+
+  // // APEX-UI-SLIM
+  // &.is-focused {
+  //   background-color: darken(@input-background-color, 5%);
+  // }
+  //
+  // .placeholder-text {
+  //   color: @text-color-subtle;
+  // }
+  // .selection .region {
+  //   background-color: @background-color-selected;
+  // }
+
+
+  // BEGIN APEX-UI-SLIM ADDITIONS  -----------------
+
+  &.is-focused {
+    border-bottom: 1px solid @base-border-color;
+    &::shadow {
+      .cursor {
+        display: block;
+      }
+    }
+  }
+
+  &,// <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
+  &::shadow {
+    .placeholder-text {
+      color: @text-color-subtle;
+    }
+
+    .selection .region {
+      background-color: @background-color-selected;
+    }
+
+    .cursor {
+      display: none;
+    }
+  }
+}
