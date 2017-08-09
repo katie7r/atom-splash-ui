@@ -1,0 +1,56 @@
+// Settings View
+// -------------------
+//
+
+
+.settings-view {
+  div > section.section.settings-panel {
+    border-top: none;
+  }
+
+  .link {
+    color: @primary-color;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .alert {
+    border: none;
+
+    .alert-info {}
+  }
+
+  .config-menu {
+    background: @base-background-color;
+
+    .panels-menu {
+      li {
+        a {
+          transition: 0.3s ease;
+        }
+
+        &.active {
+          a {
+            background: @background-color-selected;
+          }
+        }
+
+        &:hover {
+          background: @background-color-highlight;
+        }
+      }
+    }
+  }
+
+  .package-card {
+    transition: 0.3s ease;
+    background: @background-color-selected;
+    border: none;
+
+    &:hover {
+      background: @background-color-highlight;
+    }
+  }
+}

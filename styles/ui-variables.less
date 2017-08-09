@@ -20,7 +20,7 @@
 @text-color-info:    @primary-color; // @oc-blue-6; // hsl(219,  79%, 66%);
 @text-color-success: @oc-teal-6; // @primary-color; // hsl(140,  44%, 62%);
 @text-color-warning: @oc-yellow-6; // @oc-teal-6; // hsl( 36,  60%, 72%);
-@text-color-error:   @oc-pink-6; // @oc-red-6; // hsl(  9, 100%, 64%);
+@text-color-error:   @oc-red-5; // @oc-red-6; // hsl(  9, 100%, 64%);
 
 @text-color-added:    @text-color-success;
 @text-color-modified: @text-color-warning;
@@ -33,7 +33,7 @@
 @background-color-info:    @primary-color; // @oc-blue-6; // hsl(208, 100%, 50%);
 @background-color-success: @oc-teal-6; // @primary-color; // hsl(160,  70%, 36%);
 @background-color-warning: @oc-yellow-6; // @oc-orange-6; // hsl(32,   60%, 50%);
-@background-color-error:   @oc-pink-6; // @oc-red-6; // hsl(0,    70%, 50%);
+@background-color-error:   @oc-red-5; // @oc-red-6; // hsl(0,    70%, 50%);
 
 @background-color-added:    @background-color-success;
 @background-color-modified: @background-color-warning;
@@ -47,7 +47,7 @@
 
 // Base colors
 
-@base-background-color: hsl(222,6%,22%);
+@base-background-color: hsl(222,6%,22%); // @oc-gray-8;
 @base-border-color:     fade(@oc-gray-1, 25%); // @oc-gray-1; // darken(@base-background-color, 8%);
 @base-action-color:     @primary-color; // APEX-UI-SLIM
 
@@ -68,7 +68,7 @@
 @panel-heading-background-color: @base-background-color; // lighten(@base-background-color, 4%);
 @panel-heading-border-color:     @base-border-color;
 
-@overlay-background-color: @base-background-color; // lighten(@base-background-color, 5%);
+@overlay-background-color: darken(@base-background-color, 3%);
 @overlay-border-color:     @base-border-color;
 
 @button-background-color:          lighten(@base-background-color, 10%);
@@ -81,7 +81,7 @@
 @tab-background-color:        @tab-bar-background-color;
 @tab-background-color-active: @tab-bar-background-color; // lighten(@tab-bar-background-color, 10%);
 @tab-border-color:            @base-border-color;
-@tab-border-color-active:     @oc-gray-9; // APEX-UI-SLIM
+@tab-border-color-active:     @accent-color; // APEX-UI-SLIM
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;

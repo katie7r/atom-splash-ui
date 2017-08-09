@@ -3,7 +3,9 @@
 atom-pane:not(.active) {
   .tab-bar .tab.active {
     // border-top: 1px solid transparent;
-    border-color: fade(@accent-color, 50%);
+    border-color: fade(@accent-color, 33%);
+    // border-top: 1px solid fade(@accent-color, 50%);
+    // padding-top: 1px;
     color: @text-color-subtle;
   }
 }
@@ -19,7 +21,7 @@ atom-pane:not(.active) {
   border-bottom: 1px solid @base-border-color;
   border-radius: 0;
   // APEX-UI-SLIM:
-  margin: 0 0 10px 0;
+  margin: 0; // 0 0 10px 0;
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 1px;
@@ -38,9 +40,13 @@ atom-pane:not(.active) {
     padding-right: 15px; // 10px;
     // border-top: 1px solid transparent;
     border-top: 2px solid transparent;
+    // border-left: 2px solid transparent;
+    // border-bottom: 2px solid transparent;
     text-transform: uppercase;
     font-size: 11px;
     transition: all 150ms ease-out;
+    z-index: 1000;
+
     &:last-child {
       border-right: none;
     }

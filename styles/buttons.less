@@ -47,7 +47,15 @@
 .btn.btn-error   { .btn-color(@background-color-error); }
 
 .btn-color(@bg) {
-  color: @text-color-selected;
+  .btn-text-color() when (hsvvalue(@bg) >= 50%) {
+    @btn-text-color: darken(@text-color-dim, 10%);
+  }
+  .btn-text-color() when (hsvvalue(@bg) < 50%) {
+    @btn-text-color: @text-color;
+  }
+  .btn-text-color();
+
+  color: @btn-text-color;
   background-color: @bg;
 
   &:hover,
