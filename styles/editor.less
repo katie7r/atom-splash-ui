@@ -10,8 +10,6 @@ atom-text-editor .gutter {
   background: @base-background-color;
 }
 
-// APEX-UI-SLIM:::
-
 atom-text-editor, :host {
   background: @base-background-color;
 }
@@ -32,9 +30,9 @@ body {
 
 // Pane padding
 atom-pane {
-  padding: 0 0;
+  padding: 0;
 }
-// :::end
+
 
 // Mini Editor
 // -------------------
@@ -42,31 +40,24 @@ atom-pane {
 
 
 atom-text-editor[mini] {
-  // padding-left: @component-padding/2; // APEX-UI-SLIM
-  padding-left: 5px; // APEX-UI-SLIM
-  font-size: .9rem; // APEX-UI-SLIM
+  padding-left: 5px;
+  font-size: .9rem;
   color: @text-color;
-  // border-radius: @component-border-radius; // APEX-UI-SLIM
+  border-radius: @component-border-radius;
   background-color: @input-background-color;
-  border-bottom: 1px solid transparent; // APEX-UI-SLIM
+  border-bottom: 1px solid fade(@base-border-color, 75%);
 
-  // // APEX-UI-SLIM
-  // &.is-focused {
-  //   background-color: darken(@input-background-color, 5%);
-  // }
-  //
-  // .placeholder-text {
-  //   color: @text-color-subtle;
-  // }
+  .placeholder-text {
+    color: @text-color-subtle;
+  }
+
   // .selection .region {
   //   background-color: @background-color-selected;
   // }
 
-
-  // BEGIN APEX-UI-SLIM ADDITIONS  -----------------
-
   &.is-focused {
     border-bottom: 1px solid @base-border-color;
+
     &::shadow {
       .cursor {
         display: block;

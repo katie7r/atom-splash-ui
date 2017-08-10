@@ -8,11 +8,15 @@
     border-top: none;
   }
 
+  .setting-description {
+    font-weight: normal;
+  }
+
   .link {
-    color: @primary-color;
+    color: @splash-color;
 
     &:hover {
-      color: @primary-color;
+      color: @splash-color;
     }
   }
 
@@ -53,4 +57,9 @@
       background: @background-color-highlight;
     }
   }
+}
+
+select.input-select {
+  border-radius: @component-border-radius;
+  background-color: @input-background-color;
 }

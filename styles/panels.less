@@ -27,22 +27,12 @@
   & > div {
     background-color: @overlay-background-color;
     border: 1px solid @overlay-border-color;
-
-    &.fuzzy-finder {
-      padding: 0;
-    }
-
-    &.tree-view-dialog {
-      padding: 20px;
-    }
   }
 }
 
 atom-panel.modal {
   border: 1px solid @overlay-border-color;
   border-top: none;
-  // APEX-UI-SLIM:
-  // box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -53,16 +43,13 @@ atom-panel.modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: @overlay-background-color; // rgba(255, 255, 255, .95);
-  // :end
-}
+  background: @overlay-background-color;
 
-// APEX-UI-SLIM:
-atom-panel.modal > .select-list {
-  min-width: 500px;
+  & > div {
+    padding: 20px;
+  }
 }
 
 .inset-panel {
   border-radius: 0;
 }
-// :end
