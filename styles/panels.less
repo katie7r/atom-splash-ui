@@ -20,6 +20,24 @@
 // Modal -------------------
 // Used on top of the editor, like the Command Palette.
 
+.custom-title-bar atom-panel.modal {
+  top: 34px;
+  background-color: fade(@overlay-background-color, 75%);
+
+  & > div {
+    background-color: @overlay-background-color;
+    border: 1px solid @overlay-border-color;
+
+    &.fuzzy-finder {
+      padding: 0;
+    }
+
+    &.tree-view-dialog {
+      padding: 20px;
+    }
+  }
+}
+
 atom-panel.modal {
   border: 1px solid @overlay-border-color;
   border-top: none;

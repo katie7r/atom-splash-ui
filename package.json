@@ -1,11 +1,14 @@
 {
   "name": "splash-ui",
   "theme": "ui",
+  "main": "lib/splash-ui",
   "version": "0.0.0",
   "description": "A minimal theme with a splash of color",
   "keywords": [
     "ui",
-    "theme"
+    "theme",
+    "minimal",
+    "configurable"
   ],
   "repository": "https://github.com/katie7r/splash-ui",
   "license": "MIT",

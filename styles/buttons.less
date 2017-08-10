@@ -28,32 +28,27 @@
     outline: none;
   }
 
-  // APEX-UI-SLIM
-  .icon {
-      &::before {
-          position: relative;
-          top: 1px;
-      }
-  }
+  // // APEX-UI-SLIM
+  // .icon {
+  //     &::before {
+  //         position: relative;
+  //         top: 1px;
+  //     }
+  // }
 }
 
 
 // Colored buttons -----------------------
 
-.btn.btn-primary { .btn-color(@accent-color); }
+.btn.btn-primary { .btn-color(@splash-color); }
 .btn.btn-info    { .btn-color(@background-color-info); }
 .btn.btn-success { .btn-color(@background-color-success); }
 .btn.btn-warning { .btn-color(@background-color-warning); }
 .btn.btn-error   { .btn-color(@background-color-error); }
 
 .btn-color(@bg) {
-  .btn-text-color() when (hsvvalue(@bg) >= 50%) {
-    @btn-text-color: darken(@text-color-dim, 10%);
-  }
-  .btn-text-color() when (hsvvalue(@bg) < 50%) {
-    @btn-text-color: @text-color;
-  }
-  .btn-text-color();
+  .bg-text-color(@bg);
+  @btn-text-color: @bg-text-color;
 
   color: @btn-text-color;
   background-color: @bg;
@@ -87,7 +82,7 @@
   border-color: transparent;
 
   &:hover {
-      background: @base-background-color;
+      // background: @base-background-color;
   }
   // :end
 }

@@ -1,0 +1,12 @@
+// UI Functions
+// -------------------
+// These are miscellaneous functions used for various UI definitions.
+
+
+// lighter text on darkger background / darker text on lighter background
+.bg-text-color(@bg) when (lightness(@bg) <= 80%) {
+  @bg-text-color: @text-color-highlight;
+}
+.bg-text-color(@bg) when (lightness(@bg) > 80%) {
+  @bg-text-color: darken(@text-color-subtle, 15%);
+}

@@ -5,22 +5,28 @@
 
 
 @import "open-color.less";
+@import "syntax-variables";
+@import "ui-splash";
 
-@primary-color: @oc-gray-9; // APEX-UI-SLIM
-@accent-color:  @oc-gray-5; // @oc-lime-7;
+
+@primary-color: @oc-gray-9;
+
+// Base colors
+
+@base-background-color: @oc-gray-9;
+@base-border-color:     @oc-gray-8;
 
 // Text Colors
 
-@text-color:           @oc-gray-5; // @oc-gray-9; // hsl(0,0%,66%);
-@text-color-subtle:    @oc-gray-6; // @oc-gray-9; // hsl(0,0%,50%);
-@text-color-dim:       @oc-gray-6; // @oc-gray-5; // APEX-UI-SLIM
-@text-color-highlight: @oc-gray-5; // @oc-gray-9; // hsl(0,0%,94%);
-@text-color-selected:  @oc-gray-5; // @oc-gray-9; // hsl(0,0%,100%);
+@text-color:           @oc-gray-3;
+@text-color-subtle:    @oc-gray-6;
+@text-color-highlight: @oc-gray-0;
+@text-color-selected:  @oc-gray-0;
 
-@text-color-info:    @primary-color; // @oc-blue-6; // hsl(219,  79%, 66%);
-@text-color-success: @oc-teal-6; // @primary-color; // hsl(140,  44%, 62%);
-@text-color-warning: @oc-yellow-6; // @oc-teal-6; // hsl( 36,  60%, 72%);
-@text-color-error:   @oc-red-5; // @oc-red-6; // hsl(  9, 100%, 64%);
+@text-color-info:    @oc-cyan-4;
+@text-color-success: @oc-green-4;
+@text-color-warning: @oc-orange-4;
+@text-color-error:   @oc-red-4;
 
 @text-color-added:    @text-color-success;
 @text-color-modified: @text-color-warning;
@@ -30,10 +36,10 @@
 
 // Background colors
 
-@background-color-info:    @primary-color; // @oc-blue-6; // hsl(208, 100%, 50%);
-@background-color-success: @oc-teal-6; // @primary-color; // hsl(160,  70%, 36%);
-@background-color-warning: @oc-yellow-6; // @oc-orange-6; // hsl(32,   60%, 50%);
-@background-color-error:   @oc-red-5; // @oc-red-6; // hsl(0,    70%, 50%);
+@background-color-info:    @oc-cyan-8;
+@background-color-success: @oc-green-8;
+@background-color-warning: @oc-yellow-8;
+@background-color-error:   @oc-red-8;
 
 @background-color-added:    @background-color-success;
 @background-color-modified: @background-color-warning;
@@ -41,15 +47,9 @@
 @background-color-renamed:  @background-color-info;
 @background-color-ignored:  @base-background-color;
 
-@background-color-highlight: lighten(@base-background-color, 3%); // 5%);
-@background-color-selected:  lighten(@base-background-color, 5%); // 10%);
-@app-background-color:       @base-background-color; // darken(@base-background-color, 5%);
-
-// Base colors
-
-@base-background-color: hsl(222,6%,22%); // @oc-gray-8;
-@base-border-color:     fade(@oc-gray-1, 25%); // @oc-gray-1; // darken(@base-background-color, 8%);
-@base-action-color:     @primary-color; // APEX-UI-SLIM
+@background-color-highlight: lighten(@base-background-color, 5%);
+@background-color-selected:  lighten(@base-background-color, 7%);
+@app-background-color:       @base-background-color;
 
 // Component colors
 
@@ -71,28 +71,28 @@
 @overlay-background-color: darken(@base-background-color, 3%);
 @overlay-border-color:     @base-border-color;
 
-@button-background-color:          lighten(@base-background-color, 10%);
-@button-background-color-hover:    lighten(@button-background-color, 12%);
-@button-background-color-selected: @button-background-color-hover;
+@button-background-color:          @oc-gray-8;
+@button-background-color-hover:    darken(@button-background-color, 7%);
+@button-background-color-selected: darken(@button-background-color, 5%);
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:    @base-background-color;
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: @tab-bar-background-color; // lighten(@tab-bar-background-color, 10%);
+@tab-background-color-active: @tab-bar-background-color;
 @tab-border-color:            @base-border-color;
-@tab-border-color-active:     @accent-color; // APEX-UI-SLIM
+@tab-border-color-active:     @splash-color;
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
 
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: @oc-grape-6;  // grape
+@ui-site-color-2: @oc-pink-6;   // pink
+@ui-site-color-3: @oc-yellow-6; // yellow
+@ui-site-color-4: @oc-lime-6;   // lime
+@ui-site-color-5: @oc-indigo-6; // indigo
 
 // Sizes
 

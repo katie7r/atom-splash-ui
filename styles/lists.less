@@ -11,7 +11,7 @@
     padding-left: @component-padding/2;
     // APEX-UI-SLIM:
     border-bottom: 1px dotted @base-border-color;
-    color: @text-color-dim;
+    color: @text-color-subtle;
     transition: all 125ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
     // :end
 
@@ -25,6 +25,13 @@
 
       &:before{ display: none; }
     }
+
+    &:not(.selected) {
+      &.text-info    { color: desaturate(@text-color-info,    50%); }
+      &.text-success { color: desaturate(@text-color-success, 50%); }
+      &.text-warning { color: desaturate(@text-color-warning, 50%); }
+      &.text-error   { color: desaturate(@text-color-error,   50%); }
+    }
   }
 }
 
@@ -32,6 +39,8 @@
 // List Tree -------------------
 
 .list-tree {
+  color: @text-color;
+
   .selected {
     color: @text-color-selected;
   }
@@ -54,8 +63,8 @@
 
 .select-list {
   .character-match {
-    font-weight: normal !important;
-    border-bottom: 1px solid @accent-color;
+    // font-weight: normal !important;
+    border-bottom: 1px solid @splash-color;
     color: inherit;
   }
 }
@@ -86,13 +95,13 @@ autocomplete-suggestion-list.select-list.popover-list {
     }
   }
 
-  .selected {
-    background: @oc-gray-0;
-
-    .icon {
-      color: @oc-gray-9;
-    }
-  }
+  // .selected {
+  //   background: @oc-gray-0;
+  //
+  //   .icon {
+  //     color: @oc-gray-9;
+  //   }
+  // }
 }
 
 .select-list .selected .secondary-line {
@@ -105,16 +114,16 @@ autocomplete-suggestion-list.select-list.popover-list {
 
 autocomplete-suggestion-list {
   .suggestion-list-scroller {
-    background: @overlay-background-color; // white
+    background: @overlay-background-color;
   }
 
-  .left-label {
-    color: @oc-gray-6;
-  }
-
-  .word-container {
-    color: @oc-gray-5;
-  }
+  // .left-label {
+  //   color: @oc-gray-6;
+  // }
+  //
+  // .word-container {
+  //   color: @oc-gray-5;
+  // }
 
   .icon-container {
     // display: none !important;
