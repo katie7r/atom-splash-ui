@@ -3,7 +3,8 @@
 atom-pane:not(.active) {
   .tab-bar .tab.active {
     // border-top: 1px solid transparent;
-    border-color: fade(@splash-color, 33%);
+    // border-color: fade(@splash-color, 33%);
+    border-color: @splash-color-subtle;
     // border-top: 1px solid fade(@splash-color, 50%);
     // padding-top: 1px;
     color: @text-color-subtle;
@@ -103,6 +104,21 @@ atom-pane:not(.active) {
 
     &.active .close-icon:hover {
       color: @text-color;
+    }
+
+    // TODO
+    &.active {
+      .medium-red, .medium-orange, .medium-yellow, .dark-blue {
+        &.icon::before {
+          color: @splash-color;
+        }
+      }
+    }
+
+    .medium-red, .medium-orange, .medium-yellow, .dark-blue {
+      &.icon:before {
+        color: @splash-color-subtle;
+      }
     }
 
 

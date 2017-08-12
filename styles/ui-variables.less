@@ -16,7 +16,7 @@
 
 // Text Colors
 
-@text-color:           @oc-gray-3;
+@text-color:           @oc-gray-4;
 @text-color-subtle:    @oc-gray-6;
 @text-color-highlight: @oc-gray-0;
 @text-color-selected:  @oc-gray-0;
@@ -26,11 +26,24 @@
 @text-color-warning: @oc-orange-4;
 @text-color-error:   @oc-red-4;
 
+@text-color-info-subtle:    desaturate(@text-color-info,    50%);
+@text-color-success-subtle: desaturate(@text-color-success, 50%);
+@text-color-warning-subtle: desaturate(@text-color-warning, 50%);
+@text-color-error-subtle:   desaturate(@text-color-error,   50%);
+
 @text-color-added:    @text-color-success;
 @text-color-modified: @text-color-warning;
 @text-color-removed:  @text-color-error;
 @text-color-renamed:  @text-color-info;
 @text-color-ignored:  @text-color-subtle;
+
+@text-color-added-subtle:    @text-color-success-subtle;
+@text-color-modified-subtle: @text-color-warning-subtle;
+@text-color-removed-subtle:  @text-color-error-subtle;
+@text-color-renamed-subtle:  @text-color-info-subtle;
+@text-color-ignored-subtle:  lighten(@text-color-subtle, 25%);
+
+@splash-color-subtle: fade(@splash-color, 33%);
 
 // Background colors
 

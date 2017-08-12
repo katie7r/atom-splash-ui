@@ -13,11 +13,88 @@
   color: @text-color;
   background-color: @tree-view-background-color;
 
-  .list-item.selected {
-    color: @text-color-selected;
+  .list-nested-item.status-modified {
+    color: @text-color-info-subtle;
 
-    &::before { // APEX-UI-SLIM
-      background: lighten(@base-background-color, 5%);
+    &.selected, & > .list-item > .icon::before {
+      color: @text-color-info;
+    }
+  }
+
+  .list-item {
+    &.selected {
+      color: @text-color-selected;
+
+      &::before { // APEX-UI-SLIM
+        background: lighten(@base-background-color, 5%);
+      }
+    }
+
+    &.status-added {
+      &, .icon::before {
+        color: @text-color-added-subtle;
+      }
+
+      &.selected {
+        &, .icon::before {
+          color: @text-color-added;
+        }
+      }
+
+      // color: @text-color-added-subtle;
+      //
+      // &.selected, .icon::before {
+      //   color: @text-color-added;
+      // }
+    }
+
+    &.status-modified {
+      &, .icon::before {
+        color: @text-color-modified-subtle;
+      }
+
+      &.selected {
+        &, .icon::before {
+          color: @text-color-modified;
+        }
+      }
+
+      // color: @text-color-modified-subtle;
+      //
+      // &.selected, .icon::before {
+      //   color: @text-color-modified;
+      // }
     }
   }
 }
+
+
+
+// // :: files
+// .tree-view .list-item {
+//   // :: added
+//   &.status-added .icon {
+//     &, &:before {
+//       color: @file-added !important;
+//     }
+//   }
+//   // :: modified
+//   &.status-modified .icon {
+//     &, &:before {
+//       color: @file-modified !important;
+//     }
+//   }
+// }
+//
+// // Tab icon colors
+// .tab.modified  > .icon:before {
+//   color: @tab-modified-icon;
+// }
+// .medium-red, .medium-orange, .medium-yellow, .dark-blue {
+//   &.icon:before {
+//     color: @tab-modified-icon;
+//   }
+// }
+// // .tab:not(.modified) > .icon:before {
+// //   color: inherit;
+// // }
