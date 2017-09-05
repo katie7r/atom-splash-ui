@@ -1,5 +1,5 @@
 {
-  "name": "apex-ui-slim",
+  "name": "apex-ui-slim-dark",
   "theme": "ui",
   "version": "0.0.0",
   "description": "Apex monochrome theme UI inspired by iA Writer (slim variant)",
@@ -10,9 +10,10 @@
     "ia",
     "theme",
     "writer",
-    "slim"
+    "slim",
+    "dark"
   ],
-  "repository": "https://github.com/apex/apex-ui-slim",
+  "repository": "https://github.com/katie7r/apex-ui-slim-dark",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

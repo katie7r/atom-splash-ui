@@ -12,33 +12,33 @@
 
 @import "open-color.less";
 
-@primary-color: @oc-gray-9;
+@primary-color: @oc-gray-0; // @oc-gray-9;
 
 // Text Colors
-@text-color:           @oc-gray-9;
-@text-color-subtle:    @oc-gray-6;
-@text-color-dim:       @oc-gray-5;
-@text-color-highlight: @oc-gray-9;
-@text-color-selected:  @oc-gray-9;
+@text-color:           @oc-gray-0; // @oc-gray-9;
+@text-color-subtle:    @oc-gray-3; // @oc-gray-6;
+@text-color-dim:       @oc-gray-4; // @oc-gray-5;
+@text-color-highlight: @oc-gray-0; // @oc-gray-9;
+@text-color-selected:  @oc-gray-0; // @oc-gray-9;
 
-@text-color-info:    @oc-blue-6;
+@text-color-info:    @oc-blue-3; // @oc-blue-6;
 @text-color-success: @primary-color;
-@text-color-warning: @oc-teal-6;
-@text-color-error:   @oc-red-6;
+@text-color-warning: @oc-teal-3; // @oc-teal-6;
+@text-color-error:   @oc-red-3; // @oc-red-6;
 
 // Background colors
-@background-color-info:    @oc-blue-6;
+@background-color-info:    @oc-blue-3; // @oc-blue-6;
 @background-color-success: @primary-color;
-@background-color-warning: @oc-orange-6;
-@background-color-error:   @oc-red-6;
+@background-color-warning: @oc-orange-3; // @oc-orange-6;
+@background-color-error:   @oc-red-3; // @oc-red-6;
 
-@background-color-highlight: lighten(@base-background-color, 3%);
-@background-color-selected:  lighten(@base-background-color, 5%);
+@background-color-highlight: darken(@base-background-color, 3%); // lighten(@base-background-color, 3%);
+@background-color-selected:  darken(@base-background-color, 5%); // lighten(@base-background-color, 5%);
 @app-background-color:       @base-background-color;
 
 // Base colors
-@base-background-color: #fff;
-@base-border-color:     @oc-gray-1;
+@base-background-color: @oc-gray-8; // #fff;
+@base-border-color:     @oc-gray-7; // @oc-gray-1;
 @base-action-color:     @primary-color;
 
 // Component colors
@@ -60,8 +60,8 @@
 @overlay-background-color: @base-background-color;
 @overlay-border-color:     @base-border-color;
 
-@button-background-color:          lighten(@base-background-color, 10%);
-@button-background-color-hover:    lighten(@button-background-color, 12%);
+@button-background-color:          darken(@base-background-color, 10%); // lighten(@base-background-color, 10%);
+@button-background-color-hover:    darken(@button-background-color, 12%); // lighten(@button-background-color, 12%);
 @button-background-color-selected: @button-background-color-hover;
 @button-border-color:              @base-border-color;
 
@@ -69,18 +69,18 @@
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
 @tab-background-color-active: @tab-bar-background-color;
-@tab-border-color-active:     @oc-gray-9;
+@tab-border-color-active:     @oc-gray-0; // @oc-gray-9;
 @tab-border-color:            @base-border-color;
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: @oc-blue-3; // hsl(208, 100%, 50%); // blue
+@ui-site-color-2: @oc-green-3; // hsl(160,  70%, 42%); // green
+@ui-site-color-3: @oc-orange-3; // hsl(32,   60%, 50%); // orange
+@ui-site-color-4: @oc-pink-3; // #D831B0;             // pink
+@ui-site-color-5: @oc-yellow-3; // #EBDD5B;             // yellow
 
 // Sizes
 @font-size: 12px;
