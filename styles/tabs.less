@@ -4,10 +4,14 @@
 // Pane blur.
 atom-pane:not(.active) {
   .tab-bar .tab.active {
-    border-top: 1px solid transparent;
+    // border-top: 1px solid transparent;
     color: @text-color-subtle;
   }
 }
+
+// atom-pane .tab-bar[is="atom-tabs"] li.tab.sortable[is="tabs-tab"] .title {
+//   pointer-events: none; //
+// }
 
 // Tabs
 // -------------------
@@ -18,6 +22,7 @@ atom-pane:not(.active) {
     background-color: @tab-bar-background-color;
     border-top: 1px solid @base-border-color;
     margin: 0 0 10px 0;
+    z-index: 10; //
 
     .title;
 
@@ -33,6 +38,8 @@ atom-pane:not(.active) {
         font-size: 11px;
 
         transition: all 150ms ease-out;
+
+        // z-index: 100; //
 
         &:last-child {
           border-right: none;
@@ -70,7 +77,7 @@ atom-pane:not(.active) {
             top: 50%;
             right: @component-padding + 4px; // 4px -> half of icon size
             margin-top: -3px;
-            border-color: @text-color-info;
+            border-color: @base-action-color; // @text-color-info;
         }
 
         &.modified:hover .close-icon {
@@ -79,7 +86,7 @@ atom-pane:not(.active) {
         // Close Icon (the X) -------------------
 
         .close-icon {
-            opacity: 0;
+            opacity: .1;
             &::before {
                 text-align: center;
             }
