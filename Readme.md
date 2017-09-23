@@ -1,4 +1,4 @@
-Dark version of the lovely [Apex UI Slim](https://github.com/apex/apex-ui-slim) theme.
+A dark UI theme based on the lovely [Apex UI Slim](https://github.com/apex/apex-ui-slim) theme.
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
@@ -6,7 +6,7 @@ Dark version of the lovely [Apex UI Slim](https://github.com/apex/apex-ui-slim) 
 *(for now)*
 
 ```
-$ apm install katie7r/apex-ui-slim-dark
+$ apm install katie7r/atom-splash-ui
 ```
 
 ## Links
