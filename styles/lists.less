@@ -1,11 +1,10 @@
-
 // Lists
 // -------------------
-
 // Used in different places, like the Tree View, Commmand Palette etc.
 // Overrides: atom/static/lists.less
 
 // List Group -------------------
+
 .list-group {
   li {
     padding-left: @component-padding/2;
@@ -22,16 +21,16 @@
   }
 }
 
-
 // List Tree -------------------
+
 .list-tree {
   .selected {
     color: @text-color-selected;
   }
 }
 
-
 // Select List -------------------
+
 .select-list {
   li {
     padding: @component-padding * .75 @component-padding;
@@ -44,12 +43,13 @@
 .select-list {
   .character-match {
     font-weight: normal !important;
-    border-bottom: 1px solid @oc-blue-6; // @oc-blue-3;
+    border-bottom: 1px solid @oc-blue-6;
     color: inherit;
   }
 }
 
 // Popover List -------------------
+
 // Used as a popover for something like autocomplete.
 autocomplete-suggestion-list.select-list.popover-list {
   @popover-list-padding: @component-padding/2;
@@ -75,9 +75,10 @@ autocomplete-suggestion-list.select-list.popover-list {
   }
 
   .selected {
-    background: @oc-gray-8; // @oc-gray-0;
+    background: @oc-gray-8;
+
     .icon {
-      color: @oc-gray-0; // @oc-gray-9;
+      color: @oc-gray-0;
     }
   }
 }
@@ -96,18 +97,17 @@ autocomplete-suggestion-list {
   }
 
   .left-label {
-    color: @oc-gray-3; // @oc-gray-6;
+    color: @oc-gray-3;
   }
 
   .word-container {
-    color: @oc-gray-4; // @oc-gray-5;
+    color: @oc-gray-4;
   }
 
   .icon-container {
-    // display: none !important;
     .icon {
-      background: rgba(33, 37, 41, .5) !important; // rgba(255, 255, 255, .5) !important;
-      color: @oc-gray-5; // @oc-gray-4;
+      background: rgba(33, 37, 41, .5) !important;
+      color: @oc-gray-5;
     }
   }
 }

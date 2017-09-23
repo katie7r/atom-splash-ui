@@ -61,8 +61,8 @@
     }
 
     & + button.btn {
-      height: 31px;     // TODO variable?
-      margin-left: 3px; // TODO variable?
+      height: calc(~"@{tab-height} - 3px");
+      margin-left: 3px;
     }
   }
 
@@ -73,5 +73,4 @@
       background: @background-color-selected;
     }
   }
-
 }
