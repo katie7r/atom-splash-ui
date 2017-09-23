@@ -27,15 +27,16 @@ atom-pane.active .tab-bar .tab.active {
   }
 }
 
+atom-dock .tab-bar .tab {
+  border-top: 0 !important;
+  padding-top: 10px;
+  pointer-events: none;
+}
+
 // Tabs
 // -------------------
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
-
-atom-dock .tab-bar .tab {
-  border-top: 0 !important;
-  padding-top: 10px;
-}
 
 .tab-bar {
     background-color: @tab-bar-background-color;
@@ -58,7 +59,7 @@ atom-dock .tab-bar .tab {
 
         transition: all 150ms ease-out;
 
-        // z-index: 100; //
+        z-index: 100;
 
         &:last-child {
           border-right: none;
