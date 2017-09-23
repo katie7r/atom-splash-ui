@@ -11,8 +11,10 @@
 // A good start is to change the color of the `@base-background-color` variable.
 
 @import "open-color.less";
+@import "ui-splash"; // @splash-color: #F8F9FA;
 
-@primary-color: @oc-gray-0; // @oc-gray-9;
+@primary-color: @splash-color; // @oc-gray-0: #F8F9FA;
+// @primary-color: @oc-gray-0; // @oc-gray-9;
 
 // Text Colors
 @text-color:           @oc-gray-0; // @oc-gray-9;
@@ -21,25 +23,26 @@
 @text-color-highlight: @oc-gray-0; // @oc-gray-9;
 @text-color-selected:  @oc-gray-0; // @oc-gray-9;
 
-@text-color-info:    @oc-blue-4; // @oc-blue-6;
-@text-color-success: @primary-color;
-@text-color-warning: @oc-teal-4; // @oc-teal-6;
-@text-color-error:   @oc-red-4; // @oc-red-6;
-
-// Background colors
-@background-color-info:    @oc-blue-4; // @oc-blue-6;
-@background-color-success: @primary-color;
-@background-color-warning: @oc-orange-4; // @oc-orange-6;
-@background-color-error:   @oc-red-4; // @oc-red-6;
-
-@background-color-highlight: darken(@base-background-color, 3%); // lighten(@base-background-color, 3%);
-@background-color-selected:  darken(@base-background-color, 5%); // lighten(@base-background-color, 5%);
-@app-background-color:       @base-background-color;
+@text-color-info:    @oc-cyan-3;   // @oc-blue-6;
+@text-color-success: @oc-lime-3;   // @primary-color;
+@text-color-warning: @oc-yellow-3; // @oc-orange-3; // @oc-teal-4; // @oc-teal-6;
+@text-color-error:   @oc-red-3;    // @oc-red-6;
 
 // Base colors
 @base-background-color: @oc-gray-9; // #fff;
 @base-border-color:     @oc-gray-8; // @oc-gray-1;
 @base-action-color:     @primary-color;
+
+// Background colors
+@background-color-info:    @oc-cyan-7;   // @oc-blue-6;
+@background-color-success: @oc-lime-7;   // @primary-color;
+@background-color-warning: @oc-yellow-7; // @oc-orange-5; // @oc-orange-6;
+@background-color-error:   @oc-red-7;    // @oc-red-6;
+
+@app-background-color:       @base-background-color;
+@background-color-highlight: darken(@base-background-color, 3%); // lighten(@base-background-color, 3%);
+@background-color-selected:  darken(@base-background-color, 5%); // lighten(@base-background-color, 5%);
+@background-color-lighter:   lighten(@base-background-color, 3%);
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -76,11 +79,11 @@
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
-@ui-site-color-1: @oc-blue-4; // hsl(208, 100%, 50%); // blue
-@ui-site-color-2: @oc-green-4; // hsl(160,  70%, 42%); // green
-@ui-site-color-4: @oc-orange-4; // hsl(32,   60%, 50%); // orange
-@ui-site-color-4: @oc-pink-4; // #D831B0;             // pink
-@ui-site-color-5: @oc-yellow-4; // #EBDD5B;             // yellow
+@ui-site-color-1: @oc-violet-4; // hsl(208, 100%, 50%); // blue
+@ui-site-color-2: @oc-blue-4;   // hsl(160,  70%, 42%); // green
+@ui-site-color-3: @oc-teal-4;   // hsl(32,   60%, 50%); // orange
+@ui-site-color-4: @oc-orange-4; // #D831B0;             // pink
+@ui-site-color-5: @oc-pink-4;   // #EBDD5B;             // yellow
 
 // Sizes
 @font-size: 12px;

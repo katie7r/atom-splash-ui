@@ -19,3 +19,48 @@
         }
     }
 }
+
+// Change tree view added/modified file colors
+// :: folders
+.list-tree .list-nested-item {
+  // :: added
+  &.status-added {
+    &, &.selected {
+      & > .header.list-item {
+        color: desaturate(@splash-color, 25%) !important;
+      }
+    }
+  }
+  // :: modified
+  &.status-modified {
+    &, &.selected {
+      & > .header.list-item {
+        color: desaturate(@splash-color, 25%) !important;
+      }
+    }
+  }
+  // :: untouched
+  &:not(.status-added):not(.status-modified) {
+    color: @text-color-subtle !important;
+  }
+}
+
+// :: files
+.tree-view .list-item {
+  // :: added
+  &.status-added .icon {
+    &, &:before {
+      color: desaturate(@text-color-success, 25%) !important;
+    }
+  }
+  // :: modified
+  &.status-modified .icon {
+    &, &:before {
+      color: desaturate(@text-color-info, 25%) !important;
+    }
+  }
+  // :: untouched
+  &:not(.status-added):not(.status-modified) {
+    color: @text-color-subtle !important;
+  }
+}

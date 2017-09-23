@@ -1,50 +1,77 @@
 .settings-view {
-    .link {
-        color: @primary-color;
+  .link {
+    color: @primary-color;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .alert {
+    border: none;
+
+    .alert-info {}
+  }
+
+  .config-menu {
+    background: @base-background-color;
+
+    .panels-menu {
+      li {
+        a {
+          transition: 0.3s ease;
+        }
+
+        &.active {
+          a {
+            background: @background-color-selected;
+          }
+        }
 
         &:hover {
-            color: @primary-color;
+          background: @background-color-highlight;
         }
+      }
+    }
+  }
+
+  .package-card {
+    transition: 0.3s ease;
+    background: @background-color-highlight;
+    border: none;
+
+    &:hover {
+      background: @background-color-highlight;
     }
 
-    .alert {
-        border: none;
+    button.btn {
+      background: @background-color-highlight;
 
-        .alert-info {
-            
-        }
-    }
-
-    .config-menu {
-        background: @base-background-color;
-
-        .panels-menu {
-            li {
-
-                a {
-                    .transition-03;
-                }
-
-                &.active {
-                    a {
-                        background: @background-color-selected;
-                    }
-                }
-
-                &:hover {
-                    background: @background-color-highlight;
-                }
-            }
-        }
-    }
-
-    .package-card {
-        .transition-03;
+      &:hover {
         background: @background-color-selected;
-        border: none;
-
-        &:hover {
-            background: @background-color-highlight;
-        }
+      }
     }
+  }
+
+  select.form-control {
+    background: @background-color-highlight;
+
+    &:hover {
+      background: @background-color-selected;
+    }
+
+    & + button.btn {
+      height: 31px;     // TODO variable?
+      margin-left: 3px; // TODO variable?
+    }
+  }
+
+  button.btn {
+    background: @background-color-highlight;
+
+    &:hover {
+      background: @background-color-selected;
+    }
+  }
+
 }

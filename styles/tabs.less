@@ -13,15 +13,34 @@ atom-pane:not(.active) {
 //   pointer-events: none; //
 // }
 
+// TAB SPLASH
+atom-pane.active .tab-bar .tab.active {
+  border-top: 2px solid @splash-color;
+}
+.tab.modified  > .icon:before {
+  color: @splash-color;
+}
+.medium-maroon, .medium-red, .medium-orange, .medium-yellow,
+.dark-blue {
+  &.icon:before {
+    color: @splash-color;
+  }
+}
+
 // Tabs
 // -------------------
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
 
+atom-dock .tab-bar .tab {
+  border-top: 0 !important;
+  padding-top: 10px;
+}
+
 .tab-bar {
     background-color: @tab-bar-background-color;
     border-top: 1px solid @base-border-color;
-    margin: 0 0 10px 0;
+    margin: 0; // 0 0 5px 0;
     z-index: 10; //
 
     .title;

@@ -1,3 +1,6 @@
-.transition-03 {
-    transition: 0.3s ease;
+.color-contrast(@background) {
+  color: contrast(@background,
+    lighten(@background, 35%),
+    darken(@background, 35%)
+  );
 }
