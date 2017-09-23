@@ -1,0 +1,42 @@
+@import "syntax-variables";
+
+@text-color:            @syntax-text-color;
+@base-background-color: @syntax-background-color;
+
+body,
+atom-workspace.workspace,
+.atom-dock-mask,
+.settings-view {
+  background-color: @base-background-color !important;
+}
+
+// atom-text-editor {
+//   background: @syntax-background-color !important;
+//   color: @syntax-text-color !important;
+//
+//   /deep/ .indent-guide {
+//     color: rgba(255,255,255,0.035);
+//   }
+//
+//   /deep/ .selection .region {
+//     background: @syntax-selection-color !important;
+//   }
+//
+//   /deep/ .gutter {
+//     background: transparent;
+//     border: none;
+//
+//     .line-numbers {
+//       .line-number {
+//         background: transparent !important;
+//         color: @syntax-gutter-text-color !important;
+//       }
+//
+//       .cursor-line-no-selection,
+//       .cursor-line {
+//         transition: color .3s !important;
+//         color: @syntax-cursor-color !important;
+//       }
+//     }
+//   }
+// }

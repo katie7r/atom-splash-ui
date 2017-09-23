@@ -75,10 +75,10 @@ autocomplete-suggestion-list.select-list.popover-list {
   }
 
   .selected {
-    background: @oc-gray-8;
+    background: @base-border-color;
 
     .icon {
-      color: @oc-gray-0;
+      color: @text-color;
     }
   }
 }
@@ -93,21 +93,21 @@ autocomplete-suggestion-list.select-list.popover-list {
 
 autocomplete-suggestion-list {
   .suggestion-list-scroller {
-    background: white;
+    background: @text-color;
   }
 
   .left-label {
-    color: @oc-gray-3;
+    color: @text-color-dim;
   }
 
   .word-container {
-    color: @oc-gray-4;
+    color: @text-color-subtle;
   }
 
   .icon-container {
     .icon {
-      background: rgba(33, 37, 41, .5) !important;
-      color: @oc-gray-5;
+      background: fade(@base-background-color, .5) !important;
+      color: darken(@text-color-subtle, 11%);
     }
   }
 }

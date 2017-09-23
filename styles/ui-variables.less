@@ -17,10 +17,10 @@
 
 // Text Colors
 @text-color:           @oc-gray-0;
-@text-color-subtle:    @oc-gray-4;
-@text-color-dim:       @oc-gray-3;
-@text-color-highlight: @oc-gray-0;
-@text-color-selected:  @oc-gray-0;
+@text-color-subtle:    darken(@text-color, 15%); // @oc-gray-4
+@text-color-dim:       darken(@text-color, 8%);  // @oc-gray-3
+@text-color-highlight: @text-color; // @oc-gray-0
+@text-color-selected:  @text-color; // @oc-gray-0
 
 @text-color-info:    @oc-cyan-3;
 @text-color-success: @oc-lime-3;
@@ -29,7 +29,7 @@
 
 // Base colors
 @base-background-color: @oc-gray-9;
-@base-border-color:     @oc-gray-8;
+@base-border-color:     lighten(@base-background-color, 9%); // @oc-gray-8
 @base-action-color:     @primary-color;
 
 // Background colors
