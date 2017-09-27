@@ -6,13 +6,13 @@ module.exports =
         type: 'boolean'
         default: 'false'
     splashColor:
-        description: 'Set an splash color by hex value'
+        description: 'Set a splash color by hex value'
         type: 'string'
         default: '#66D9E8' # @oc-cyan-3
     useSyntax:
-        description: 'Override the gutter, background, and selection colours'
+        description: 'Override the UI background and text colors with those from selected syntax theme'
         type: 'boolean'
-        default: 'true'
+        default: 'false'
 
   activate: (state) ->
     atom.themes.onDidChangeActiveThemes ->
