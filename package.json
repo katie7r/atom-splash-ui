@@ -7,11 +7,12 @@
   "keywords": [
     "ui",
     "theme",
-    "slim",
     "dark",
     "minimal",
-    "clean",
-    "configurable"
+    "configurable",
+    "accent",
+    "apex",
+    "slim"
   ],
   "repository": "https://github.com/katie7r/atom-splash-ui",
   "license": "MIT",
