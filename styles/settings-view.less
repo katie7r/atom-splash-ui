@@ -44,6 +44,11 @@
       background: @background-color-highlight;
     }
 
+    &.disabled {
+      background: @background-color-highlight;
+      opacity: 0.5;
+    }
+
     button.btn {
       background: @background-color-highlight;
 
@@ -56,7 +61,7 @@
   select.form-control {
     background: @background-color-highlight;
 
-    &:hover {
+    &:hover, &:focus {
       background: @background-color-selected;
     }
 
