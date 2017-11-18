@@ -1,5 +1,5 @@
 // Editor
-atom-text-editor, :host {
+atom-text-editor {
   background: @base-background-color;
 }
 
@@ -30,15 +30,14 @@ atom-text-editor[mini] {
 
   &.is-focused {
     border-bottom: 1px solid @base-border-color;
-    &::shadow {
+    &, &.editor {
       .cursor {
         display: block;
       }
     }
   }
 
-  &, // <-- Deprecated. The `&,` can be removed once the Shadow DOM can't be turned off in the settings.
-  &::shadow {
+  &, &.editor {
     .placeholder-text {
       color: @text-color-subtle;
     }
